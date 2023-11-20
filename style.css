@@ -125,9 +125,9 @@ body::before {
 }
 
 .phone {
-  --inner-border: 20px;
+  --inner-border: 35px;
   background-color: hsl(var(--clr-neutral-100));
-  border-radius: 25px;
+  border-radius: 45px;
   padding: 1rem;
   max-width: 25rem;
   width: 100%;
@@ -329,6 +329,7 @@ body::before {
   .container {
     max-width: 70rem;
     grid-template-columns: 4fr 5fr;
+    padding: 0;
   }
 
   .info {
