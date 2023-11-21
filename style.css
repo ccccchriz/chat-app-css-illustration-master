@@ -132,6 +132,7 @@ body::before {
   width: 100%;
   overflow: hidden;
   border: 1rem solid hsl(var(--clr-neutral-100));
+  box-shadow: 10px 10px 50px -30px hsl(var(--clr-neutral-300));
 }
 
 /* 
