@@ -126,11 +126,12 @@ body::before {
 
 .phone {
   --inner-border: 35px;
-  background-color: hsl(var(--clr-neutral-100));
+  background-color: hsl(var(--clr-neutral-200));
   border-radius: 45px;
-  padding: 1rem;
   max-width: 25rem;
   width: 100%;
+  overflow: hidden;
+  border: 1rem solid hsl(var(--clr-neutral-100));
 }
 
 /* 
@@ -138,6 +139,8 @@ body::before {
 */
 
 .phone__header {
+  position: relative;
+  z-index: 1;
   display: grid;
   background: linear-gradient(
     -90deg,
@@ -206,7 +209,6 @@ body::before {
 */
 
 .phone__chat {
-  background-color: hsl(var(--clr-neutral-200));
   padding: 1rem;
   display: grid;
   gap: 1rem;
@@ -214,6 +216,7 @@ body::before {
 
 .phone__send-message-container {
   background-color: hsl(var(--clr-neutral-200));
+  position: relative;
   border-radius: 0 0 var(--inner-border) var(--inner-border);
   padding: 1rem;
 }
@@ -349,5 +352,103 @@ body::before {
 
   .info > p {
     font-size: 1.625rem;
+  }
+}
+
+/* 
+  Animation
+*/
+
+.phone__message--customer:nth-child(1) {
+  position: absolute;
+  top: -3.8rem;
+  right: 1rem;
+  z-index: -1;
+}
+
+.phone__chat {
+  animation: chat 10s linear;
+}
+
+@keyframes chat {
+  from {
+    transform: translateY(120%);
+  }
+
+  4% {
+    transform: translateY(120%);
+  }
+
+  /* FIRST RIGHT MESSAGE IN */
+
+  4% {
+    transform: translateY(100%);
+  }
+  17% {
+    transform: translateY(100%);
+  }
+
+  /* FRIST LEFT MESSAGE IN */
+
+  20% {
+    transform: translateY(86%);
+  }
+  24% {
+    transform: translateY(86%);
+  }
+
+  /* SECOND LEFT MESSAGE IN */
+
+  27% {
+    transform: translateY(75%);
+  }
+  43% {
+    transform: translateY(75%);
+  }
+
+  /* DOG PICTURES IN */
+
+  46% {
+    transform: translateY(60%);
+  }
+  52% {
+    transform: translateY(60%);
+  }
+
+  /* second right message in */
+
+  55% {
+    transform: translateY(50%);
+  }
+  60% {
+    transform: translateY(50%);
+  }
+
+  /* third right message */
+
+  63% {
+    transform: translateY(40%);
+  }
+  78% {
+    transform: translateY(40%);
+  }
+
+  /* third left message */
+
+  81% {
+    transform: translateY(24%);
+  }
+  90% {
+    transform: translateY(24%);
+  }
+
+  /* options in */
+
+  93% {
+    transform: translateY(0%);
+  }
+
+  to {
+    transform: translateY(0%);
   }
 }
