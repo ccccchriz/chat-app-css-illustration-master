@@ -348,11 +348,11 @@ body::before {
   }
 
   .info > h2 {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 
   .info > p {
-    font-size: 1.625rem;
+    font-size: 1.1875rem;
   }
 }
 
